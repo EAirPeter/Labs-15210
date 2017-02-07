@@ -1,0 +1,12 @@
+Group is
+  $/smlnj-lib.cm
+  $/basis.cm
+
+  support/support.cm
+  MkAllShortestPaths.sml
+  MkThesaurusASP.sml
+
+  support/Tester.sml
+  Tests.sml
+  support/MkRefAllShortestPaths.sml
+  support/MkRefThesaurusASP.sml

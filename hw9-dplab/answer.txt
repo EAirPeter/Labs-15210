@@ -1,0 +1,50 @@
+Task 4.1: It's too easy for me.
+Task 4.2: It's too easy for me.
+Task 4.3: It's too easy for me.
+
+Task 4.4: F[0][N - 1][1]
+  f(l, r) {
+    for (i : [1, k])
+      F[l][r][i] = -1
+    if (l == r) {
+      F[l][r][S[l]] = 0
+      return;
+    }
+    for (i : [l, r)) {
+      f(l, i)
+      f(i + 1, r)
+      for (j : [0, m))
+        if (F[l][i][Y[j]] != -1 && F[i + 1][r][Z[j]] != -1) {
+            w = max(F[l][i][Y[j]], F[i + 1][r][Z[j]])
+            upd(F[l][r][X[j]], w)
+        }
+    }
+  }
+
+
+ACAB => A | CAB
+  A = 0
+  CAB => C | AB
+    C = 0
+    AB => A | B
+    B = 0
+    (AB -> C) = 1
+    CAB => C | C => 1
+  CAB => CA | B
+    CA = -1
+  CAB = -1
+ACAB => AC | AB
+  AC => A | C
+  A = 0
+  C = 0
+  AC, B = 1
+  AB => A | B
+  A = 0
+  B = 0
+  AB, C = 1
+  ACAB, BC = 1
+  BC = 1
+  AcAB = 2
+ACAB => ACA | B
+  ACA => AC | A
+  

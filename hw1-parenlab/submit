@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ ! -f written.pdf ]; then
+  echo "You must have a written.pdf to submit."
+  exit 1
+fi
+
+cat .handin | xargs tar cvzf handin.tgz .version
+
+if [ $# -eq 0 ]; then
+  USER=$(whoami)
+  ASSESSMENT=$(cat .labname)
+
+  DESTINATION=$(wget -q -O- "http://unofficial.fish.ics.cs.cmu.edu/officialSubmit.rb?course=15210-f13&user=${USER}&assessment=${ASSESSMENT}")
+  cp handin.tgz ${DESTINATION}
+  wget -q -O- "http://unofficial.fish.ics.cs.cmu.edu/officialSubmit.rb?course=15210-f13&user=${USER}&assessment=${ASSESSMENT}&submit=handin.tgz" | grep "Submission received"
+
+  ERR=$?
+
+  if [ $ERR -ne 0 ]; then
+    echo "Submission NOT received! Try submitting handin.tgz manually through Autolab, or contact a TA."
+  else
+    echo "Please verify your score on Autolab."
+  fi
+fi

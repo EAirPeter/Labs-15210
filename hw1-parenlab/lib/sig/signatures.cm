@@ -1,0 +1,11 @@
+Group is
+  BST.sig
+  RANDOM210.sig
+  SET.sig
+  ELEMENT.sig
+  PRIMITIVES.sig
+  TABLE.sig
+  KEY.sig
+  PRIORITY_QUEUE.sig
+  SEQUENCE.sig
+  ST_SEQUENCE.sig

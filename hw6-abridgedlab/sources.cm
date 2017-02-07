@@ -1,0 +1,10 @@
+Group is
+  support/support.cm
+  MkBridges.sml
+  MkRefBridges.sml
+  MkRefAStarCore.sml
+  MkAStarCore.sml
+  MkAStarElt.sml
+  Tester.sml
+  Tests.sml
+  lib/util/StudentTestSuite.sml

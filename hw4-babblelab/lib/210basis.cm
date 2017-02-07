@@ -1,0 +1,21 @@
+Library
+  structure Array
+  structure Bool
+  structure Char
+  structure General
+  structure Int
+  structure IntInf
+  structure LargeInt
+  structure LargeReal
+  structure List
+  structure ListPair
+  structure Math
+  structure Option
+  structure Random
+  structure Real
+  structure String
+  structure Vector
+  structure Word
+is
+  $/basis.cm
+  $/smlnj-lib.cm

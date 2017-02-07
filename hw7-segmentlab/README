@@ -1,0 +1,13 @@
+Running the tester of this lab requires Python 2.7 and PIL along with a SML/NJ installation. 
+You should also have Python in your PATH.
+
+To test your solution on Windows, open a command prompt at the directory, and run "run".
+You should enter a SML/NJ environment.
+
+Input ' use "testing"; ' in the environment to compile your solution and tester. 
+Be sure to use testing. Only making sources.cm will NOT compile the tester properly for direct use!
+
+Use Tester.testMST and Tester.testSegmenter as instructed in the pdf file.
+
+The modifications are provided "as-is". There's no guarantee that it will always be correct. 
+Also, it will not work with the modified version of Test Suite to give expected results.

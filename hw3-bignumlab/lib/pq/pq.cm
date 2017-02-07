@@ -1,0 +1,10 @@
+Group
+  signature PRIORITY_QUEUE
+  functor MkLeftistHeapPQ
+  functor MkSkewBinomialHeapPQ
+is
+  ../210basis.cm
+  ../sig/signatures.cm
+  
+  MkLeftistHeapPQ.sml
+  MkSkewBinomialHeapPQ.sml

@@ -1,0 +1,23 @@
+Library
+  library(210basis.cm)
+  group(sig/signatures.cm)
+  group(primitives/primitives.cm)
+  group(elements/elements.cm)
+  group(sequence/sequence.cm)
+  group(table/table.cm)
+  group(pq/pq.cm)
+  group(bst/bst.cm)
+  group(random210/random210.cm)
+is
+  $/basis.cm
+  $/smlnj-lib.cm
+  210basis.cm
+
+  primitives/primitives.cm
+  sig/signatures.cm
+  elements/elements.cm
+  sequence/sequence.cm
+  bst/bst.cm
+  table/table.cm
+  pq/pq.cm
+  random210/random210.cm

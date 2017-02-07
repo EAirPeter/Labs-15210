@@ -1,0 +1,8 @@
+CM.make "sources.cm";
+CM.make "lib/210lib.cm";
+structure OurMST1 = MkOurMSTC(structure Seq = ArraySequence
+                            structure Rand = Random210)
+structure OurMST2 = MkOurMSTD(structure Seq = ArraySequence
+                            structure Rand = Random210)                           
+structure Tester = MkTester(structure OurMST1 = OurMST1
+			    structure OurMST2 = OurMST2)

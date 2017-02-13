@@ -11,6 +11,7 @@ struct
   type token = string
   type kgram = token seq
 
+  (* record maxK and the histogram for every kgram *)
   type kgramstats = int * (string hist Table.table)
 
   fun makeStats (corpus : string) (maxK : int) : kgramstats =

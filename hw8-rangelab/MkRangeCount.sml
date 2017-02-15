@@ -12,12 +12,12 @@ struct
   val compareKey : (Key.t * Key.t) -> order = Key.compare
 
   (* Define this yourself *)
-  type countTable = int table table
+  type countTable = unit table table
 
   fun makeCountTable (S : point seq) : countTable = let
     val sqSorted = Seq.sort (fn (p1, p2) => compareKey (#1 p1, #1 p2)) S
     val (sqMapsTmp, mLast) = Seq.iterh
-      (fn (m, p) => OrdTable.insert #1 (#2 p, 1) m)
+      (fn (m, p) => OrdTable.insert #1 (#2 p, ()) m)
       (OrdTable.empty ())
       sqSorted
     val sqMaps =
